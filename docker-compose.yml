@@ -8,6 +8,7 @@ services:
     depends_on:
       - mysqldb
     environment:
+      MYSQL_URL: jdbc:mysql://mysqldb:3306/test-docker?createDatabaseIfNotExist=true
       MYSQL_USER: root
       MYSQL_PASSWORD: secret
   mysqldb:
